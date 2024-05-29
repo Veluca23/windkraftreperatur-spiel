@@ -1,0 +1,249 @@
+[
+  {
+    "name": "eingangHauptquartier",
+    "beschreibung": "Im Eingang des Hauptquartieres",
+    "ausgaenge": [
+      {
+        "richtung": "north",
+        "name": "bueroHauptquartier"
+      },
+      {
+        "richtung": "west",
+        "name": "parkplatzHauptquartier"
+      }
+    ]
+  },
+  {
+    "name": "bueroHauptquartier",
+    "beschreibung": "Im Buero des Hauptquartieres",
+    "ausgaenge": [
+      {
+        "richtung": "west",
+        "name": "lagerHauptquartier"
+      },
+      {
+        "richtung": "east",
+        "name": "cafeteriaHauptquartier"
+      },
+      {
+        "richtung": "south",
+        "name": "eingangHauptquartier"
+      }
+    ],
+    "gegenstaende": [
+      {
+        "name": "Auftrag",
+        "beschreibung": "Dein Auftrag ist es den Generator der Windkraftanlage zu reparieren.",
+        "verbrauchbar": false,
+        "tragbar": true,
+        "benutzbar": false
+      },
+      {
+        "name": "Windparknummer",
+        "beschreibung": "Die Windparknummer lautet 42.",
+        "verbrauchbar": false,
+        "tragbar": true,
+        "benutzbar": false
+      }
+    ]
+  },
+  {
+    "name": "lagerHauptquartier",
+    "beschreibung": "Im Groß-Lager des Hauptquartiers",
+    "ausgaenge": [
+      {
+        "richtung": "east",
+        "name": "bueroHauptquartier"
+      }
+    ],
+    "gegenstaende": [
+      {
+        "name": "Werkzeugkasten",
+        "beschreibung": "Ein Werkzeugkasten für die Reperatur.",
+        "verbrauchbar": false,
+        "tragbar": true,
+        "benutzbar": false
+      }
+    ]
+  },
+  {
+    "name": "cafeteriaHauptquartier",
+    "beschreibung": "In der Cafeteria des Hauptquartiers",
+    "ausgaenge": [
+      {
+        "richtung": "west",
+        "name": "bueroHauptquartier"
+      }
+    ],
+    "gegenstaende": [
+      {
+        "name": "Kuchen",
+        "beschreibung": "Ein Stück Käsekuchen",
+        "verbrauchbar": true,
+        "tragbar": true,
+        "benutzbar": false
+      },
+      {
+        "name": "Kaffee",
+        "beschreibung": "Ein Becher heißer Kaffee",
+        "verbrauchbar": false,
+        "tragbar": true,
+        "benutzbar": false
+      },
+      {
+        "name": "Autoschluessel",
+        "beschreibung": "Der Autoschluessel fuer den Firmenwagen",
+        "verbrauchbar": true,
+        "tragbar": true,
+        "benutzbar": false
+      }
+    ]
+  },
+  {
+    "name": "parkplatzHauptquartier",
+    "beschreibung": "Auf dem Parkplatz des Hauptquartiers",
+    "ausgaenge": [
+      {
+        "richtung": "east",
+        "name": "eingangHauptquartier"
+      },
+      {
+        "richtung": "south",
+        "name": "eingangWindpark"
+      }
+    ],
+    "gegenstaende": [
+      {
+        "name": "Firmenwagen",
+        "beschreibung": "Der Transporter der Firma",
+        "verbrauchbar": false,
+        "tragbar": false,
+        "benutzbar": true,
+        "benoetigtBeschreibung": "Im Auto siehst du ",
+        "benoetigt": [
+          {
+            "name": "Autoschluessel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "eingangWindpark",
+    "beschreibung": "Im Eingang der Windkraftanlage",
+    "ausgaenge": [
+      {
+        "richtung": "north",
+        "name": "obergeschossWindpark"
+      },
+      {
+        "richtung": "east",
+        "name": "eingangHauptquartier"
+      }
+    ]
+  },
+  {
+    "name": "obergeschossWindpark",
+    "beschreibung": "Im Obergeschoss der Windkraftanlage",
+    "ausgaenge": [
+      {
+        "richtung": "north",
+        "name": "aussichtWindpark"
+      },
+      {
+        "richtung": "east",
+        "name": "generatorWindpark"
+      },
+      {
+        "richtung": "down",
+        "name": "eingangWindpark"
+      },
+      {
+        "richtung": "west",
+        "name": "kontrollWindpark"
+      }
+    ]
+  },
+  {
+    "name": "generatorWindpark",
+    "beschreibung": "Im Generatorraum der Windkraftanlage",
+    "ausgaenge": [
+      {
+        "richtung": "east",
+        "name": "werkbankWindpark"
+      },
+      {
+        "richtung": "west",
+        "name": "obergeschossWindpark"
+      }
+    ],
+    "gegenstaende": [
+      {
+        "name": "Generator",
+        "beschreibung": "Der zu reparierende Generator",
+        "verbrauchbar": false,
+        "tragbar": false,
+        "benutzbar": true,
+        "benoetigt": [
+          {
+            "name": "Werkzeugkasten"
+          },
+          {
+            "name": "Schaltplan"
+          },
+          {
+            "name": "Ersatzteile"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "werkbankWindpark",
+    "beschreibung": "Vor der Werkbank im Generatorraum",
+    "ausgaenge": [
+      {
+        "richtung": "west",
+        "name": "generatorWindpark"
+      }
+    ],
+    "gegenstaende": [
+      {
+        "name": "Ersatzteile",
+        "beschreibung": "Ersatzteile für den Generator",
+        "verbrauchbar": false,
+        "tragbar": true,
+        "benutzbar": false
+      }
+    ]
+  },
+  {
+    "name": "kontrollWindpark",
+    "beschreibung": "Im Kontrollraum der Windkraftanlage",
+    "ausgaenge": [
+      {
+        "richtung": "east",
+        "name": "obergeschossWindpark"
+      }
+    ],
+    "gegenstaende": [
+      {
+        "name": "Schaltplan",
+        "beschreibung": "Der Schaltplan für den Generator",
+        "verbrauchbar": false,
+        "tragbar": true,
+        "benutzbar": false
+      }
+    ]
+  },
+  {
+    "name": "aussichtWindpark",
+    "beschreibung": "Beim Aussichtsfenster der Windkraftanlage",
+    "ausgaenge": [
+      {
+        "richtung": "south",
+        "name": "obergeschossWindpark"
+      }
+    ]
+  }
+]
